@@ -34,7 +34,7 @@ function run_whitespace() {
     rm -f "$whitespace"
   }
   trap rmtempfile EXIT
-  ( find dffml -type f -name \*.py -exec grep -EHn " +$" {} \; ) 2>&1 \
+  ( find dffml_operations_binsec -type f -name \*.py -exec grep -EHn " +$" {} \; ) 2>&1 \
     | tee "$whitespace"
   lines=$(wc -l < "$whitespace")
   if [ "$lines" -ne 0 ]; then
@@ -44,7 +44,7 @@ function run_whitespace() {
 }
 
 function run_style() {
-  black --check dffml tests examples
+  black --check .
 }
 
 if [ "x$PLUGIN" != "x" ]; then
