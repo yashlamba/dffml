@@ -1,20 +1,11 @@
-# DFFML codesec Features
+# DFFML Binary Security Analysis Operations
 
-codesec description.
+Operations that do analysis of binaries (compiled programs) and report back that
+status of security related properties of them, such as:
 
-## Demo
-
-![Demo](https://github.com/intel/dffml/raw/master/docs/images/feature_demo.gif)
-
-## Usage
-
-Example usage
-
-```console
-dffml evaluate repo -keys relavant keys -features misc
-```
+- ASLR (Address Space Layout Randomization)
 
 ## License
 
-DFFML DFFML codesec are distributed under the
+DFFML Binary Security Analysis Operations are distributed under the
 [MIT License](LICENSE).

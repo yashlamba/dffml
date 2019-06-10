@@ -8,7 +8,7 @@ from setuptools import find_packages, setup
 
 self_path = os.path.dirname(os.path.realpath(__file__))
 
-with open(os.path.join(self_path, 'dffml_feature_codesec', 'version.py'),
+with open(os.path.join(self_path, 'dffml_operations_binsec', 'version.py'),
           'r') as f:
     for line in f:
         if line.startswith('VERSION'):
@@ -37,14 +37,14 @@ except (ModuleNotFoundError, ImportError):
             git_rpmfile], check=False)
 
 setup(
-    name='dffml_feature_codesec',
+    name='dffml-operations-binsec',
     version=version,
     description='',
     long_description=readme,
     long_description_content_type='text/markdown',
     author='John Andersen',
     author_email='john.s.andersen@intel.com',
-    url='https://github.com/intel/dffml/blob/master/feature/codesec/README.md',
+    url='https://github.com/intel/dffml/blob/binsec/README.md',
     license='MIT',
 
     keywords=[
@@ -69,20 +69,20 @@ setup(
     packages=find_packages(),
     entry_points={
         'dffml.operation': [
-            'url_to_urlbytes = dffml_feature_codesec.feature.operations:url_to_urlbytes',
-            'urlbytes_to_tarfile = dffml_feature_codesec.feature.operations:urlbytes_to_tarfile.op',
-            'urlbytes_to_rpmfile = dffml_feature_codesec.feature.operations:urlbytes_to_rpmfile.op',
-            'files_in_rpm = dffml_feature_codesec.feature.operations:files_in_rpm.op',
-            'is_binary_pie = dffml_feature_codesec.feature.operations:is_binary_pie.op',
-            'cleanup_rpm = dffml_feature_codesec.feature.operations:cleanup_rpm.op',
+            'url_to_urlbytes = dffml_operations_binsec.operations:url_to_urlbytes',
+            'urlbytes_to_tarfile = dffml_operations_binsec.operations:urlbytes_to_tarfile.op',
+            'urlbytes_to_rpmfile = dffml_operations_binsec.operations:urlbytes_to_rpmfile.op',
+            'files_in_rpm = dffml_operations_binsec.operations:files_in_rpm.op',
+            'is_binary_pie = dffml_operations_binsec.operations:is_binary_pie.op',
+            'cleanup_rpm = dffml_operations_binsec.operations:cleanup_rpm.op',
         ],
         'dffml.operation.implementation': [
-            'url_to_urlbytes = dffml_feature_codesec.feature.operations:URLToURLBytes',
-            'urlbytes_to_tarfile = dffml_feature_codesec.feature.operations:urlbytes_to_tarfile.imp',
-            'urlbytes_to_rpmfile = dffml_feature_codesec.feature.operations:urlbytes_to_rpmfile.imp',
-            'files_in_rpm = dffml_feature_codesec.feature.operations:files_in_rpm.imp',
-            'is_binary_pie = dffml_feature_codesec.feature.operations:is_binary_pie.imp',
-            'cleanup_rpm = dffml_feature_codesec.feature.operations:cleanup_rpm.imp',
+            'url_to_urlbytes = dffml_operations_binsec.operations:URLToURLBytes',
+            'urlbytes_to_tarfile = dffml_operations_binsec.operations:urlbytes_to_tarfile.imp',
+            'urlbytes_to_rpmfile = dffml_operations_binsec.operations:urlbytes_to_rpmfile.imp',
+            'files_in_rpm = dffml_operations_binsec.operations:files_in_rpm.imp',
+            'is_binary_pie = dffml_operations_binsec.operations:is_binary_pie.imp',
+            'cleanup_rpm = dffml_operations_binsec.operations:cleanup_rpm.imp',
         ],
     },
 )
