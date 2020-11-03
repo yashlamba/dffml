@@ -190,6 +190,7 @@ jobs:
       run: |
         pip install -U setuptools
         pip install -e .[dev]
+        pip install torch===1.7.0 torchvision===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
         dffml service dev install -skip model/vowpalWabbit model/autosklearn
     - name: Test
       run: python setup.py test
