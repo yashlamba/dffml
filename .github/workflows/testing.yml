@@ -159,7 +159,7 @@ jobs:
           CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }} codecov
         fi
 
-  test windows:
+  testwindows:
     runs-on: windows-latest
     strategy:
       fail-fast: false
