@@ -4,7 +4,7 @@ import unittest
 import subprocess
 
 
-ROOT = pathlib.Path(__file__).parents[3]
+ROOT = pathlib.Path(__file__).parents[4]
 EXAMPLE_PATH = ROOT / "examples" / "dataflow" / "locking" / "example.py"
 
 
