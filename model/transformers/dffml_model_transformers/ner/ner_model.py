@@ -273,7 +273,7 @@ class NERModelContext(ModelContext):
             if self.parent.config.tokenizer_name
             else self.parent.config.model_name_or_path,
             cache_dir=self.parent.config.cache_dir,
-            use_fast=self.parent.config.use_fast,
+            # use_fast=self.parent.config.use_fast,
         )
 
     def align_predictions(
